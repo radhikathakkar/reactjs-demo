@@ -10,6 +10,7 @@ import { PROMOTIONS } from '../shared/promotions';
 import { COMMENTS } from '../shared/comments';
 import { LEADERS } from '../shared/leaders';
 import DishDetail from './DishDetailComponent';
+import About from './AboutComponent';
 class Main extends Component {
 
   constructor(props) {
@@ -33,6 +34,12 @@ class Main extends Component {
             leader = {this.state.leaders.filter(lead => lead.featured)[0]}
              />
         );
+    }
+    const AboutPage = () => {
+      return (
+        <About leaders = {this.state.leaders}
+        />
+      )
     }
     const MenuPage = () => {
         return(
@@ -58,6 +65,7 @@ class Main extends Component {
         <Header />
         <Switch>
             <Route path='/home' component={HomePage} />
+            <Route path='/aboutus' component={AboutPage} />
             <Route exact path="/menu" component={MenuPage} />
             <Route path="/menu/:dishId" component={DishWithId} />
             <Route exact path="/contactus" component={Contact} />
