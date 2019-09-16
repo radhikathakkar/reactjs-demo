@@ -4,6 +4,7 @@ import {
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
 } from 'reactstrap';
 import { NavLink, Link } from 'react-router-dom';
+
 class Header extends Component {
 
     constructor(props) {
@@ -42,8 +43,7 @@ class Header extends Component {
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}></NavbarToggler>
-                        <NavbarBrand className="mr-auto">
-                            <Link to='/'><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></Link>
+                        <NavbarBrand className="mr-auto"><Link to='/'><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></Link>
                         </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
