@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import Contact from './ContactComponent';
 import DishDetail from './DishDetailComponent';
 import About from './AboutComponent';
-import { addComment,fetchDishes, fetchPromos, fetchComments } from '../redux/ActionCreators';
+import { postComment,fetchDishes, fetchPromos, fetchComments } from '../redux/ActionCreators';
 import { actions } from 'react-redux-form';
 
 
@@ -23,7 +23,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
+  addComment: (dishId, rating, author, comment) => dispatch(postComment(dishId, rating, author, comment)),
   fetchDishes: () => { dispatch(fetchDishes())},
   fetchPromotions: () => { dispatch(fetchPromos())},
   fetchComments: () => { dispatch(fetchComments())},
